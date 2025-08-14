@@ -1,0 +1,9 @@
+{
+  "domain": "ha_json_rest_nt",
+  "name": "JSON REST NT Tariff",
+  "version": "1.0",
+  "documentation": "https://example.com",
+  "requirements": [],
+  "dependencies": [],
+  "codeowners": []
+}

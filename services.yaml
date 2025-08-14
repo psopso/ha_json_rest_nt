@@ -1,0 +1,4 @@
+nttariff_update:
+  name: Aktualizovat NT tarif
+  description: Načte data z /config/tariff.json a aktualizuje senzor nízkého tarifu.
+  fields: {}
