@@ -8,6 +8,8 @@ import voluptuous as vol
 import logging
 import datetime
 
+from datetime import timedelta
+
 import homeassistant.helpers.config_validation as cv
 
 from .functions import check_time_in_intervals_by_weekday, get_nttarifftable
