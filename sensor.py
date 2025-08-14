@@ -1,5 +1,6 @@
 from homeassistant.components.sensor import SensorEntity
 from homeassistant.components.sensor import PLATFORM_SCHEMA
+from homeassistant.helpers.event import async_track_time_interval
 
 import requests
 import json
