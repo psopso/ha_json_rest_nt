@@ -64,6 +64,16 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         }
     )    
 
+    async def hourly_callback(now):
+        """Funkce, která se spustí každou hodinu."""
+        _LOGGER.info("Hodinová úloha běží! Čas: %s", now)
+        # Zde můžeš udělat libovolnou akci:
+        # např. čtení API, aktualizace entity, zápis do souboru atd.
+
+    # Spustí hourly_callback každých 60 minut
+    async_track_time_interval(hass, hourly_callback, timedelta(minutes=1))
+
+
 class NTTariffSensor(SensorEntity):
     def __init__(self, meter_no, cez_url):
         self._attr_name = "Sensor nizkeho tarifu"
