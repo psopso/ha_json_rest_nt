@@ -75,8 +75,9 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         await sensor.hass.services.async_call(
             "ha_json_rest_nt",         # doména integrace
             "nttariff_update",      # název služby
-        {
-        }
+            {
+            }
+        )
         _LOGGER.info('Hodinová úloha skončila.')
     )    
 
