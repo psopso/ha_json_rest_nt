@@ -72,6 +72,13 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
         _LOGGER.info("Hodinová úloha běží! Čas: %s", now)
         # Zde můžeš udělat libovolnou akci:
         # např. čtení API, aktualizace entity, zápis do souboru atd.
+        await sensor.hass.services.async_call(
+            "ha_json_rest_nt",         # doména integrace
+            "nttariff_update",      # název služby
+        {
+        }
+    )    
+
 
     # Spustí hourly_callback každých 60 minut
     async_track_time_interval(hass, hourly_callback, timedelta(minutes=1))
