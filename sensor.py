@@ -77,7 +77,7 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
             "nttariff_update",      # název služby
         {
         }
-        _LOGGER.info('Hodinová úloha skončila.');
+        _LOGGER.info('Hodinová úloha skončila.')
     )    
 
 
