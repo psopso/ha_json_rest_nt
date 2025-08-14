@@ -82,8 +82,8 @@ async def async_setup_platform(hass, config, async_add_entities, discovery_info=
     
 
 
-    # Spustí hourly_callback každých 60 minut
-    async_track_time_interval(hass, hourly_callback, timedelta(minutes=1))
+    # Spustí hourly_callback každých 10 hodin
+    async_track_time_interval(hass, hourly_callback, timedelta(hours=10))
 
 
 class NTTariffSensor(SensorEntity):
